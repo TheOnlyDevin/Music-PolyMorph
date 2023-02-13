@@ -1,7 +1,5 @@
 package productv4;
 
-import ie.atu.productv3.Product;
-
 public class Software extends Product {
 
     private String version;

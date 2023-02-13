@@ -1,27 +1,25 @@
 package productv4;
 
-import ie.atu.productv3.Product;
-
 public class Book extends Product {
 
-    private String artist;
+    private String author;
 
     public Book() {
         super();
-        artist = "";
+        author = "";
         count++;
     }
 
     public void setAuthor(String author) {
-        this.artist = author;
+        this.author = author;
     }
 
     public String getAuthor() {
-        return artist;
+        return author;
     }
 
     @Override
     public String toString() {
-        return super.toString() + " by " + artist;
+        return super.toString() + " by " + author;
     }
 }

@@ -1,12 +1,8 @@
 package productv4;
 
-import ie.atu.productv3.Book;
-import ie.atu.productv3.Product;
-import ie.atu.productv3.Software;
-
 public class ProductDB {
 
-    public static ie.atu.productv3.Product getProduct(String productCode) {
+    public static Product getProduct (String productCode) {
         // In a more realistic application, this code would
         // get the data for the product from a file or database
         // For now, this code just uses if/else statements
@@ -20,7 +16,7 @@ public class ProductDB {
             myBook.setCode(productCode);
             myBook.setDescription("ATU Java Programming");
             myBook.setPrice(57.50);
-            myBook.setArtist("Joe Brown");
+            myBook.setAuthor("Joe Brown");
             p = myBook;
         } else if (productCode.equalsIgnoreCase("jsp")) {
             Book myBook = new Book();
@@ -39,27 +35,20 @@ public class ProductDB {
         }
 
 
-        if (productCode.equalsIgnoreCase("studios")) {
-            Software mySoftware = new Software();
-            mySoftware.setCode(productCode);
-            mySoftware.setDescription("Visual Studios");
-            mySoftware.setPrice(57.50);
-            mySoftware.setVersion("Microsoft 1.1");
-            p = mySoftware;
-        } else if (productCode.equalsIgnoreCase("eclipse")) {
-            Software mySoftware = new Software();
-            mySoftware.setCode(productCode);
-            mySoftware.setDescription("Build Java apps");
-            mySoftware.setPrice(57.50);
-            mySoftware.setVersion("Eclipse Neon");
-            p = mySoftware;
-        } else if (productCode.equalsIgnoreCase("oracle")) {
-            Software mySoftware = new Software();
-            mySoftware.setCode(productCode);
-            mySoftware.setDescription("Latest MySQL");
-            mySoftware.setPrice(54.50);
-            mySoftware.setVersion("Oracle 3.0");
-            p = mySoftware;
+        if (productCode.equalsIgnoreCase("PINK")) {
+            Music myMusic = new Music();
+            myMusic.setCode(productCode);
+            myMusic.setDescription("Wish you were here by Pink Flyod");
+            myMusic.setPrice(8.00);
+            myMusic.setLabel("Part of the Columbia group");
+            p = myMusic;
+        } else if (productCode.equalsIgnoreCase("JOHN")) {
+            Music myMusic = new Music();
+            myMusic.setCode(productCode);
+            myMusic.setDescription("New light by John Mayer");
+            myMusic.setPrice(13.99);
+            myMusic.setLabel("Part of the Coulumbia group");
+            p = myMusic;
         }
         return p;
     }
