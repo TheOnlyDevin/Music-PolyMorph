@@ -1,8 +1,12 @@
-package ie.atu.productv3;
+package productv4;
+
+import ie.atu.productv3.Book;
+import ie.atu.productv3.Product;
+import ie.atu.productv3.Software;
 
 public class ProductDB {
 
-    public static Product getProduct(String productCode) {
+    public static ie.atu.productv3.Product getProduct(String productCode) {
         // In a more realistic application, this code would
         // get the data for the product from a file or database
         // For now, this code just uses if/else statements
@@ -14,23 +18,23 @@ public class ProductDB {
         {
            Book myBook = new Book();
             myBook.setCode(productCode);
-            myBook.setDescription("Wish you were here by Pink Floyd\n Part of the Columbia group");
-            myBook.setPrice(8.00);
-            myBook.setArtist("Pink Floyd");
+            myBook.setDescription("ATU Java Programming");
+            myBook.setPrice(57.50);
+            myBook.setArtist("Joe Brown");
             p = myBook;
         } else if (productCode.equalsIgnoreCase("jsp")) {
             Book myBook = new Book();
             myBook.setCode(productCode);
-            myBook.setDescription("New Light by John Mayer\n Part of the Columbia group");
-            myBook.setPrice(13.99);
-            myBook.setArtist("John Mayer");
+            myBook.setDescription("Java Servlets and JSP");
+            myBook.setPrice(57.50);
+            myBook.setAuthor("Mike White");
             p = myBook;
         } else if (productCode.equalsIgnoreCase("mysql")) {
             Book myBook = new Book();
             myBook.setCode(productCode);
-            myBook.setDescription("Numb by Linkin Park\n Part of Warner Records");
+            myBook.setDescription("Lennon's MySQL");
             myBook.setPrice(54.50);
-            myBook.setArtist("Linkin Park");
+            myBook.setAuthor("Jim Lennon");
             p = myBook;
         }
 
